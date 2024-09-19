@@ -15,7 +15,7 @@
         loadUsers();
 
         function loadUsers() {
-            $http.get('/companies-using-jhipster/users.json').then(function (response) {
+            $http.get('/documentation-archive/v8.0.0-rc.1/companies-using-jhipster/users.json').then(function (response) {
                 $scope.users = response.data.users;
             });
         }
