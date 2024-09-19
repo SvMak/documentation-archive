@@ -60,7 +60,7 @@
         var currentModule;
         return {
             getModulesConfig: function () {
-                return $http.get('/modules/marketplace/data/modules-config.json').success(function (resp) {
+                return $http.get('/documentation-archive/v7.0.0-beta.1/modules/marketplace/data/modules-config.json').success(function (resp) {
                     return resp;
                 });
             },
