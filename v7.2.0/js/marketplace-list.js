@@ -4,7 +4,7 @@
     angular.module('marketplace.list', ['ngRoute', 'jhipster.service'])
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/list', {
-                templateUrl: '/modules/marketplace/list/list.html',
+                templateUrl: '/documentation-archive/v7.2.0/modules/marketplace/list/list.html',
                 controller: 'ModuleListCtrl'
             });
         }])
