@@ -3,7 +3,7 @@
     angular.module('marketplace.details', ['ngRoute', 'btford.markdown'])
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/details/:npmPackageName', {
-                templateUrl: '/modules/marketplace/details/details.html',
+                templateUrl: '/documentation-archive/v6.9.1/modules/marketplace/details/details.html',
                 controller: 'ModuleDetailsCtrl'
             });
         }])

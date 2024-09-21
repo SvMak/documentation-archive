@@ -1,23 +1,30 @@
 (function () {
-    'use strict';
-    angular
-        .module('jhipster.users', [])
-        .config(['$interpolateProvider', function ($interpolateProvider) {
-            return $interpolateProvider.startSymbol('{(').endSymbol(')}');
-        }])
-        .controller('UsersCtrl', UsersCtrl);
+  "use strict";
+  angular
+    .module("jhipster.users", [])
+    .config([
+      "$interpolateProvider",
+      function ($interpolateProvider) {
+        return $interpolateProvider.startSymbol("{(").endSymbol(")}");
+      },
+    ])
+    .controller("UsersCtrl", UsersCtrl);
 
-    UsersCtrl.$inject = ['$http', '$scope'];
+  UsersCtrl.$inject = ["$http", "$scope"];
 
-    function UsersCtrl($http, $scope) {
-        $scope.users = [];
-        $scope.showFeatured = true;
-        loadUsers();
+  function UsersCtrl($http, $scope) {
+    $scope.users = [];
+    $scope.showFeatured = true;
+    loadUsers();
 
-        function loadUsers() {
-            $http.get('/companies-using-jhipster/users.json').then(function (response) {
-                $scope.users = response.data.users;
-            });
-        }
+    function loadUsers() {
+      $http
+        .get(
+          "/documentation-archive/v8.5.0/companies-using-jhipster/users.json"
+        )
+        .then(function (response) {
+          $scope.users = response.data.users;
+        });
     }
+  }
 })();
