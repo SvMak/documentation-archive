@@ -17,8 +17,16 @@ body {
   color: #ffffff;
 }
 
-.topbar {
-  padding: var(--padding);
+.container {
+  width: calc(100% - 2 * var(--padding));
+  max-width: 1280px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
@@ -29,18 +37,63 @@ body {
   min-height: 4rem;
 }
 
-.topbar-wrapper {
+.navbar-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
-.topbar-logo {
-  height: 1.75rem;
+.navbar-link {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-nav a svg {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.navbar-nav a:hover svg {
+  fill: #236fa4;
+}
+
+.navbar-link:hover, .navbar-link:visited {
+  color: inherit
+}
+
+.navbar-logo {
+  height: 1.5rem;
   width: auto;
 }
 
-.topbar-title {
+.page-header {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 600;
@@ -49,10 +102,8 @@ body {
 
 .list {
   list-style: none;
-  width: calc(100% - 2 * var(--padding));
-  max-width: 1280px;
   background-color: var(--primary-color);
-  margin: 3rem 1rem;
+  margin-bottom: 3rem;
   border-radius: .375rem;
   overflow: hidden;
   padding-top: .75rem;
@@ -90,9 +141,12 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .list {
+  .container {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .list {
     columns: 3;
   }
 }
